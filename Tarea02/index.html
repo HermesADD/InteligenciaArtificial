@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de Richard Dawkins</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Configuración Inicial</h2>
+
+        <div class="fila">
+            <label for="entradaObjetivo">Cadena Objetivo:</label>
+            <input type="text" id="entradaObjetivo" value="METHINKS IT IS LIKE A WEASEL" size="40">
+        </div>
+        <p id="ayudaObjetivo" class="texto-ayuda">
+            * Ingresa solo letras y espacios. Los números y símbolos serán eliminados automáticamente.
+        </p>
+
+        <div class="opciones">
+            <div>
+                <input type="radio" id="opcionAleatoria" name="opcionInicio" value="1" checked>
+                <label for="opcionAleatoria">Generar cadena de manera aleatoria</label>
+            </div>
+            <div class="fila-opcion-manual">
+                <input type="radio" id="opcionManual" name="opcionInicio" value="2">
+                <label for="opcionManual">Generar cadena de manera manual</label>
+                <input type="text" id="entradaCadena" disabled size="32">
+            </div>
+            <p id="ayudaManual" class="texto-ayuda">
+                * La cadena debe tener exactamente la misma longitud que la Cadena Objetivo.
+            </p>
+        </div>
+
+        <button id="btnIniciar">Iniciar Evolución</button>
+
+        <h3>Progreso de la Evolución:</h3>
+        <textarea id="txtSalida" readonly></textarea>
+    </div>
+
+    <script src="dawkins.js"></script>
+</body>
+</html>
